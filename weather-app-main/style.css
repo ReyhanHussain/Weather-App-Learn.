@@ -6,7 +6,19 @@ body {
     color: #f0f0fe;
     font-family: "Bricolage Grotesque", sans-serif;
 }
+/* Firefox */
+* {
+    scrollbar-color: #444 #000;
+}
 
+/* Chrome, Edge, Brave, Opera, Safari */
+::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
 .navBarContainer {
     display: flex;
     flex-direction: row;
@@ -28,7 +40,7 @@ body {
     margin: 0;
 }
 
-.unitBtn{
+.unitBtn {
     width: 90px;
     height: 33px;
     border-radius: 8px;
@@ -39,7 +51,7 @@ body {
     font-size: 16px;
 }
 
-.unitsOptionsMenu{
+.unitsOptionsMenu {
     position: absolute;
     text-align: left;
     right: 22px;
@@ -54,13 +66,15 @@ search {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
     margin-bottom: 30px;
 }
-input{
+
+input {
     background-color: #25253F;
-    font-size:15px;
+    font-size: 15px;
     font-style: italic;
     color: #D6D5E6;
 }
@@ -107,7 +121,6 @@ search button {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: aquamarine;
     background-image: url("./assets/images/bg-today-large.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,11 +147,13 @@ search button {
     width: 100%;
     min-height: 50px;
 }
-.menu-title{
+
+.menu-title {
     font-size: 15px;
     font-weight: 500;
 }
-.section-title{
+
+.section-title {
     font-size: 10px;
     background-color: #02012b;
     border-radius: 3px;
@@ -147,6 +162,7 @@ search button {
     font-weight: 800;
     font-style: italic;
 }
+
 .outerContainer {
     display: flex;
     justify-content: center;
@@ -199,8 +215,9 @@ search button {
     align-items: center;
     background-color: #25253fb8;
     border-radius: 8px;
-    padding: 0.2em;
     box-sizing: border-box;
+    font-size: 14px;
+    padding: 7px;
 }
 
 .curWeatherIcon img {
@@ -285,12 +302,6 @@ span img {
 
 
 .miniCardContainer {
-    /* display: grid;
-    grid-template-columns: 135px 136px 136px 136px;
-    grid-template-rows: 100px;
-    gap: 2px;
-    justify-items: center;
-    align-items: center; */
     display: flex;
     width: 100%;
     gap: 15px;
@@ -323,7 +334,7 @@ span img {
     column-gap: 10px;
     height: 90%;
     grid-template-rows: 170px 90px 20px 100px;
-    grid-template-columns: 550px 240px
+    grid-template-columns: 550px 270px
 }
 
 .dailyForcastText {
@@ -369,6 +380,89 @@ span img {
     align-items: center;
 }
 
-.hidden{
+.hidden {
     display: none;
+}
+
+.place {
+    font-size: 40px;
+}
+
+@media (max-width: 840px) {
+
+    .gridContainer {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        width: 100%;
+        row-gap: 5px;
+        height: 90%;
+        grid-template-rows: 270px 200px 30px 400px;
+        grid-template-columns: 80%;
+    }
+
+    .hourlyForecast {
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+        grid-row: 5;
+        grid-column: auto;
+        border-radius: 20px;
+        background-color: #25253f;
+        margin-bottom: 80px;
+        height: 600px;
+    }
+
+    .todayCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-image: url("./assets/images/bg-today-large.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 14px;
+        width: 100%;
+        justify-self: center;
+    }
+
+
+    .miniCardContainer {
+        display: flex;
+        width: 100%;
+        gap: 5px;
+        justify-content: space-evenly;
+        justify-self: center;
+        align-items: center;
+        padding-top: 10px;
+        grid-row: 2;
+        flex-wrap: wrap;
+        grid-column: 1;
+    }
+
+    .forecastContainer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+        grid-row: 4;
+        grid-column: 1;
+
+    }
+h1 {
+    margin: 40px;
+}
+    
+.searcBarContainer input {
+    width: 80vw;
+}
+
 }
