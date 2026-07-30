@@ -14,36 +14,260 @@
 
 <body>
   <div class="navBarContainer">
-    <span><img src="./assets/images/logo.svg" alt="logo"></span> <span>
+    <span><img class="logo" src="./assets/images/logo.svg" alt="logo"></span> <span>
 
       <div class="units">
-        <button>Units</button>
+        <button class="unitBtn">🛠 Units⏷</button>
       </div>
     </span>
   </div>
-
-  <div class="searcBarContainer">
-    <h1>How's the sky looking today?</h1>
-    <search>
-      <input type="text" id="searcBar" placeholder="Search for a place">
-      <span>
-        <button class="search">Search</button>
-      </span>
-    </search>
-  </div>
-
-
-  <div class="mainContainer">
-    <div class="todayCard">
-      <div class="placeAndDate">
-        <span class="place">Berlin, Germany</span>
-        <span class="date">Tuesday, Aug 5, 2025</span>
-      </div>
-      <div class="currTempAndGraphic">
-        <span><img src="./assets/images/icon-sunny.webp" alt="sunny"></span>
-        <span class="currTemp">20°</span>
-      </div>
+  <div class="outerContainer">
+    <div class="searcBarContainer">
+      <h1>How's the sky looking today?</h1>
+      <search>
+        <input type="text" id="searcBar" placeholder="Search for a place">
+        <span>
+          <button class="search">Search</button>
+        </span>
+      </search>
     </div>
+
+      <div class="gridContainer">
+
+        <div class="todayCard">
+          <div class="placeAndDate">
+            <span class="place">Berlin, Germany</span>
+            <span class="date">Tuesday, Aug 5, 2025</span>
+          </div>
+          <div class="currTempAndGraphic">
+            <span><img class="graphic" src="./assets/images/icon-sunny.webp" alt="sunny"></span>
+            <span class="currTemp">20°</span>
+          </div>
+        </div>
+
+        <div class="miniCardContainer">
+          <div class="miniCard">
+            <span class="miniCardHeaderStyle">Feels Like</span>
+            <span class="miniCardValue">18°</span>
+          </div>
+
+          <div class="miniCard">
+            <span class="miniCardHeaderStyle">Humidity</span>
+            <span class="miniCardValue">45%</span>
+          </div>
+
+          <div class="miniCard">
+            <span class="miniCardHeaderStyle">Wind</span>
+            <span class="miniCardValue">14 <span class="kmph">km/h</span></span>
+          </div>
+
+          <div class="miniCard">
+            <span class="miniCardHeaderStyle">Precipitation</span>
+            <span class="miniCardValue">0 <span class="mm">mm</span></span>
+          </div>
+        </div>
+        <div class="dailyForcastText">
+          <p>Daily forecast</p>
+        </div>
+
+        <div class="forecastContainer">
+
+          <div class="forecastCard">
+            <div class="date">Wed</div>
+            <div class="curWeatherIcon"><img src="./assets/images/icon-overcast.webp" alt=""></div>
+            <div class="tempRange">
+              <span class="leftValue">20°</span>
+              <span class="rightValue">18°</span>
+            </div>
+          </div>
+
+          <div class="forecastCard">
+            <div class="date">Wed</div>
+            <div class="curWeatherIcon"><img src="./assets/images/icon-overcast.webp" alt=""></div>
+            <div class="tempRange">
+              <span class="leftValue">20°</span>
+              <span class="rightValue">18°</span>
+            </div>
+          </div>
+
+          <div class="forecastCard">
+            <div class="date">Thu</div>
+            <div class="curWeatherIcon"><img src="./assets/images/icon-drizzle.webp" alt=""></div>
+            <div class="tempRange">
+              <span class="leftValue">20°</span>
+              <span class="rightValue">18°</span>
+            </div>
+          </div>
+
+          <div class="forecastCard">
+            <div class="date">Fri</div>
+            <div class="curWeatherIcon"><img src="./assets/images/icon-fog.webp" alt=""></div>
+            <div class="tempRange">
+              <span class="leftValue">20°</span>
+              <span class="rightValue">18°</span>
+            </div>
+          </div>
+
+          <div class="forecastCard">
+            <div class="date">Sat</div>
+            <div class="curWeatherIcon"><img src="./assets/images/icon-rain.webp" alt=""></div>
+            <div class="tempRange">
+              <span class="leftValue">20°</span>
+              <span class="rightValue">18°</span>
+            </div>
+          </div>
+
+          <div class="forecastCard">
+            <div class="date">Sun</div>
+            <div class="curWeatherIcon"><img src="./assets/images/icon-rain.webp" alt=""></div>
+            <div class="tempRange">
+              <span class="leftValue">20°</span>
+              <span class="rightValue">18°</span>
+            </div>
+          </div>
+
+          <div class="forecastCard">
+            <div class="date">Mon</div>
+            <div class="curWeatherIcon"><img src="./assets/images/icon-sunny.webp" alt=""></div>
+            <div class="tempRange">
+              <span class="leftValue">20°</span>
+              <span class="rightValue">18°</span>
+            </div>
+          </div>
+        </div>
+        <div class="hourlyForecast">
+          <div class="hourlyForecastHeader">
+            <p>Hourly Forecast</p>
+            <span>
+            <select id="day">
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+              <option value="sunday">Sunday</option>
+            </select>
+            </span>
+          </div>
+
+          <div class="hourlyForecastContainer">
+            <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+            <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+  <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+
+  <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+
+
+              <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+
+
+              <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+
+
+              <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+            <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+            <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+            <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+            <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+            <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+            <div class="hourlyTimeAndTempCard">
+              <span class="hourlyForecastImgAndTempContainer">
+                <img src="./assets/images/icon-storm.webp" alt="">
+                <span class="time">3 PM</span>
+              </span>
+              <span class="tempForHourlyCard">18°</span>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
   </div>
 </body>
 
