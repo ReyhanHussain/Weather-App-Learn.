@@ -38,6 +38,18 @@ body {
     font-weight: 600;
     font-size: 16px;
 }
+
+.unitsOptionsMenu{
+    position: absolute;
+    text-align: left;
+    right: 22px;
+    background-color: #2f2f49f1;
+    width: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
 search {
     width: 100%;
     display: flex;
@@ -122,7 +134,19 @@ search button {
     width: 100%;
     min-height: 50px;
 }
+.menu-title{
+    font-size: 15px;
+    font-weight: 500;
+}
+.section-title{
+    font-size: 10px;
+    background-color: #02012b;
+    border-radius: 3px;
+    padding: 4px;
 
+    font-weight: 800;
+    font-style: italic;
+}
 .outerContainer {
     display: flex;
     justify-content: center;
@@ -343,4 +367,8 @@ span img {
     height: 75vh;
     overflow: hidden;
     align-items: center;
+}
+
+.hidden{
+    display: none;
 }
