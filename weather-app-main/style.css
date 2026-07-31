@@ -197,6 +197,8 @@ body {
     justify-content: space-around;
     gap: 1em;
     align-items: center;
+    font-size: 10px;
+
 }
 
 .forecastCard {
