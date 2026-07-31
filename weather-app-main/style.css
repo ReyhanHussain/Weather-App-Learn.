@@ -355,7 +355,7 @@ span img {
 .hourlyForecastContainer {
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
     width: 100%;
     /* max-width: 250px; */
     gap: 10px;
@@ -371,9 +371,7 @@ span img {
     align-items: center;
 }
 
-.hidden {
-    display: none;
-}
+
 
 .place {
     font-size: 40px;
@@ -412,16 +410,37 @@ search {
 }
 
 .searchLoading {
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     position: absolute;
     align-items: flex-start;
     top: 50px;
+    gap: 3px;
+    box-sizing: border-box;
+    padding: 10px;
     height: 150px;
     background: #25253f;
-    width: inherit;
+    width: 100%;
     border-radius: 8px;
-    display: flex;
     border: 2px solid #3C3E5B;
+    overflow-y: auto;
+}
+
+.searchInProgress {
+    background-color: #423951;
+    line-height: 20px;
+    margin: 0;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #25253f;
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+.selectedElement{
+    outline: 2px solid #4657D9;
 }
 
 .searchBarAndLoaderOuterContainer {
@@ -432,6 +451,10 @@ search {
     gap: 2em;
     flex-wrap: wrap;
 
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 840px) {
