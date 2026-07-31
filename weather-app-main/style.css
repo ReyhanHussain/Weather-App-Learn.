@@ -6,6 +6,7 @@ body {
     color: #f0f0fe;
     font-family: "Bricolage Grotesque", sans-serif;
 }
+
 /* Firefox */
 * {
     scrollbar-color: #444 #000;
@@ -19,6 +20,7 @@ body {
 ::-webkit-scrollbar-track {
     background: #000;
 }
+
 .navBarContainer {
     display: flex;
     flex-direction: row;
@@ -62,26 +64,23 @@ body {
     border: 3px solid black;
 }
 
-search {
-    width: 100%;
+
+.test {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-input {
+
+.searchBarAndLoader input {
     background-color: #25253F;
     font-size: 15px;
     font-style: italic;
     color: #D6D5E6;
-}
-
-.searcBarContainer input {
-    width: 100%;
-    max-width: 25em;
+    width: 50%;
     height: 2.5em;
     border-radius: 8px;
     outline: 0;
@@ -89,15 +88,6 @@ input {
     padding-inline: 15px;
 }
 
-search button {
-    height: 2.8em;
-    width: 6em;
-    border-radius: 8px;
-    background-color: #4657D9;
-    color: #D6D5E6;
-    font-size: 14px;
-    font-weight: 700;
-}
 
 
 
@@ -133,6 +123,7 @@ search button {
     font-size: 54px;
     font-weight: 700;
     font-style: italic;
+    padding-inline: 10px;
 }
 
 .miniCard {
@@ -143,7 +134,7 @@ search button {
     padding: 1em;
     border-radius: 16px;
     background-color: #25253fb8;
-    max-width: 90px;
+    max-width: 30%;
     width: 100%;
     min-height: 50px;
 }
@@ -233,7 +224,7 @@ search button {
     display: flex;
     justify-self: center;
     flex-direction: column;
-    max-width: 250px;
+    /* max-width: 250px; */
     justify-content: center;
     width: 100%;
     align-items: center;
@@ -366,7 +357,7 @@ span img {
     flex-direction: column;
     overflow-y: scroll;
     width: 100%;
-    max-width: 250px;
+    /* max-width: 250px; */
     gap: 10px;
 
 }
@@ -386,6 +377,61 @@ span img {
 
 .place {
     font-size: 40px;
+    padding-inline: 20px;
+}
+
+search button {
+    height: 2.8em;
+    width: 6em;
+    border-radius: 8px;
+    background-color: #4657D9;
+    color: #D6D5E6;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: self-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+
+.searchBarAndLoader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    width: 70%;
+}
+
+.searchLoading {
+    justify-content: space-around;
+    position: absolute;
+    align-items: flex-start;
+    top: 50px;
+    height: 150px;
+    background: #25253f;
+    width: inherit;
+    border-radius: 8px;
+    display: flex;
+    border: 2px solid #3C3E5B;
+}
+
+.searchBarAndLoaderOuterContainer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: first baseline;
+    gap: 2em;
+    flex-wrap: wrap;
+
 }
 
 @media (max-width: 840px) {
@@ -406,7 +452,7 @@ span img {
         justify-self: center;
         flex-direction: column;
         justify-content: center;
-        width: 100%;
+        width: 90%;
         align-items: center;
         gap: 10px;
         overflow: hidden;
@@ -436,7 +482,7 @@ span img {
         display: flex;
         width: 100%;
         gap: 5px;
-        justify-content: space-evenly;
+        justify-content: space-between;
         justify-self: center;
         align-items: center;
         padding-top: 10px;
@@ -449,20 +495,36 @@ span img {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-evenly;
         align-items: center;
+        justify-content: space-around;
         width: 100%;
         gap: 10px;
         grid-row: 4;
+        box-sizing: border-box;
         grid-column: 1;
+        padding: 0.6em;
 
     }
-h1 {
-    margin: 40px;
-}
-    
-.searcBarContainer input {
-    width: 80vw;
-}
+
+    h1 {
+        margin: 40px;
+    }
+
+    .searchBarAndLoader input {
+        width: 80vw;
+    }
+
+    .hourlyTimeAndTempCard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-self: center;
+        background-color: #2F2F49;
+        border-radius: 8px;
+        padding-inline: 10px;
+        width: 80%;
+        max-width: 400px;
+        height: 30px;
+    }
 
 }
